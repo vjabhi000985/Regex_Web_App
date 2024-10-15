@@ -1,0 +1,78 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00f, #0ff, #0f0, #ff0, #f00);
+  font-size: larger;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  margin-top: 30px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+  width: 100%;
+  max-height: 800px; 
+}
+
+.btn-primary {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.loading-message {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.result-message {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+.custom-textarea {
+  width: 100%; 
+  transition: all 0.3s ease; 
+  border-radius: 5px; 
+  padding: 10px; 
+  font-size: 16px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Change appearance on focus */
+.custom-textarea:focus {
+  outline: none; 
+  border: 2px solid #007bff; 
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+}
+
+/* Optional: Change background color on hover */
+.custom-textarea:hover {
+  background-color: #f0f8ff;
+}
+
+.nav-link:hover{
+  color: #007bff;
+}
