@@ -1,3 +1,4 @@
+/* Handling Regex Checker */
 async function handleRegexSubmit(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
@@ -31,6 +32,7 @@ async function handleRegexSubmit(event) {
   }
 }
 
+/* Clearing Regex Checker Output */
 function clearRegexInputs() {
   // Clear the regex pattern and test string input fields
   document.getElementById('regexPattern').value = '';
@@ -43,6 +45,7 @@ function clearRegexInputs() {
   document.getElementById('loading').classList.add('d-none');
 }
 
+/* Handling Email Validation */
 async function handleEmailSubmit(event) {
 event.preventDefault(); // Prevent the form from submitting normally
 
@@ -73,6 +76,7 @@ const resultText = data.valid ?
 document.getElementById('emailResult').innerHTML = resultText;
 }
 
+/* Clearing Email Validation Output */
 function clearEmailInputs() {
 // Clear the email input field
 document.getElementById('emailInput').value = '';
