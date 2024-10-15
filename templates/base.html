@@ -10,7 +10,27 @@
 <body>
     {% include 'components/navbar.html' %}
 
-    <div class="container">
+    <section class="regex-check">
+      <div class="container">
+        <h2>Regex Checker</h2>
+        <form id="regexForm" onsubmit="return handleRegexSubmit(event);">
+          <div class="mb-3">
+            <label for="regexPattern" class="form-label">Regex Pattern</label>
+            <input type="text" class="form-control" id="regexPattern" name="regexPattern" required>
+          </div>
+          <div class="mb-3">
+            <label for="testString" class="form-label">Test String</label>
+            <textarea class="form-control custom-textarea" id="testString" name="testString" required rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Check</button>
+          <button type="button" class="btn btn-outline-secondary" id="clearButton" onclick="clearRegexInputs()">Clear</button>
+        </form>
+  
+        <div id="loading" class="d-none">Loading...</div>
+        <div id="result" class="mt-3"></div>
+      </div>
+    </section>
+    <!-- <div class="container">
       <h2>Regex Checker</h2>
       <form id="regexForm" onsubmit="return handleRegexSubmit(event);">
         <div class="mb-3">
@@ -27,9 +47,25 @@
 
       <div id="loading" class="d-none">Loading...</div>
       <div id="result" class="mt-3"></div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <section id="email-validate">
+      <div class="container">
+        <h2>Email Validator</h2>
+        <form id="emailForm" onsubmit="return handleEmailSubmit(event);">
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Enter your Email ID</label>
+            <input type="text" class="form-control" id="emailInput" name="email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Validate</button>
+          <button type="button" class="btn btn-outline-secondary" id="clearButton" onclick="clearEmailInputs()">Clear</button>
+        </form>
+  
+        <div id="emailLoading" class="d-none">Loading...</div>
+        <div id="emailResult" class="mt-3"></div>
+      </div>
+    </section>
+    <!-- <div class="container">
       <h2>Email Validator</h2>
       <form id="emailForm" onsubmit="return handleEmailSubmit(event);">
         <div class="mb-3">
@@ -42,7 +78,7 @@
 
       <div id="emailLoading" class="d-none">Loading...</div>
       <div id="emailResult" class="mt-3"></div>
-    </div>
+    </div> -->
 
     <!--Footer Section-->
     <footer class="text-center py-4 mt-4 border-top">

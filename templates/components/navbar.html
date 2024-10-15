@@ -13,7 +13,7 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end align-items-center" id="main-nav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav w-100 justify-content-lg-end text-center">
         <li class="nav-item">
           <a href="#" class="nav-link text-light" style="font-family: 'Poppins', sans-serif; font-weight: 500;">
             Home
@@ -37,10 +37,44 @@
 <!-- Add this link to the head of your document to import Poppins font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+<!-- Add custom styles -->
 <style>
-  .nav-link:hover {
-    text-decoration: underline; /* Adds an underline on hover */
-    color: blue; /* Change the color to a lighter shade or any preferred color */
-}
+  .nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
 
+  nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(5, 248, 235);
+    transition: width 0.4s ease, left 0.4s ease;
+  }
+  .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline; 
+    color: aqua !important;
+  }
 </style>
+
+<!-- JS for page reload on same path click -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (window.location.hash === href) {
+        e.preventDefault();
+        window.location.reload();
+      }
+    });
+  });
+</script>
