@@ -55,7 +55,7 @@
         <form id="emailForm" onsubmit="return handleEmailSubmit(event);">
           <div class="mb-3">
             <label for="emailInput" class="form-label">Enter your Email ID</label>
-            <input type="text" class="form-control" id="emailInput" name="email" required>
+            <input type="text" class="form-control" id="emailInput" name="email" autocomplete="on" required>
           </div>
           <button type="submit" class="btn btn-primary">Validate</button>
           <button type="button" class="btn btn-outline-secondary" id="clearButton" onclick="clearEmailInputs()">Clear</button>
