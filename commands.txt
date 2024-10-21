@@ -1,0 +1,12 @@
+1.Connect to aws ec2 instance:
+ssh -i "flask_deployment_internship_september_24_key.pem" ubuntu@ec2-3-110-48-252.ap-south-1.compute.amazonaws.com
+
+2.File transfer to aws ec2 instance:
+scp -r -i "flask_deployment_internship_september_24_key.pem" Regex_App ubuntu@ec2-3-110-48-252.ap-south-1.compute.amazonaws.com:~/
+
+3. sudo apt update - check for updates
+4. sudo apt upgrade - download all the updates and make updations.
+5. sudo apt install python3-pip - to install python and pip
+6. pip install --break-system-packages -r requirements.txt - forcefully install flask
+7. nohup python3 app.py & - to run app without interruption
+8. sudo kill 1123 - sudo kill process id - to stop my flask app
